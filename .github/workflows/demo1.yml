@@ -12,8 +12,8 @@ on:
       - main
       - 'dev-*'   # any words started with dev-
       - 'feat/**' # ** means it includes all sub holders underneath.
-    paths:
-      - '**.js'   # any files end with .js underneath.
+    paths-ignore:
+      - '.github/workflows/*'   # ignore any files in there.
 jobs:
   deploy:
     runs-on: ubuntu-latest
